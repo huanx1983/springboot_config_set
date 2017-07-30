@@ -1,1 +1,39 @@
-test:123
+server:
+  port  : 8000
+  context-path : /nexus3-api
+
+
+spring:
+  profiles:
+    active : dev
+
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/huanx1983/springboot_config_set.git
+
+
+
+---
+
+spring:
+  profiles : dev
+
+nexus3:
+  url : http://15.114.100.2:8081/service/siesta/rest/v1/script
+  username  : admin
+  password  : admin123
+
+---
+
+spring:
+  profiles : prod
+
+nexus3:
+  url : http://127.0.0.1:8081/service/siesta/rest/v1/script
+  username  : admin
+  password  : admin123
+
+
