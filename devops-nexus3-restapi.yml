@@ -1,6 +1,6 @@
 server:
   port  : 8000
-  context-path : /nexus3-api
+  context-path : /devops-nexus3-api
 
 
 spring:
